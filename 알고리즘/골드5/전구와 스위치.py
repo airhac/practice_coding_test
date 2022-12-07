@@ -9,12 +9,12 @@ def change(temp):
     cnt = 1
     for i in range(1, len(temp)):
         if target[i - 1] != temp[i - 1]:
-           cnt += 1
-           temp[i - 1] = str(1 - int(temp[i - 1]))
-           temp[i] = str(1 - int(temp[i]))
+            cnt += 1
+            temp[i - 1] = str(1 - int(temp[i - 1]))
+            temp[i] = str(1 - int(temp[i]))
            
-           if i < len(temp) - 1:
-               temp[i + 1] = str(1 - int(temp[1]))
+            if i < len(temp) - 1:
+                temp[i + 1] = str(1 - int(temp[i + 1]))
     if temp == target:
         return cnt
     return 100001
@@ -22,12 +22,12 @@ def not_change(temp):
     cnt = 0
     for i in range(1, len(temp)):
         if target[i - 1] != temp[i - 1]:
-           cnt += 1
-           temp[i - 1] = str(1 - int(temp[i - 1]))
-           temp[i] = str(1 - int(temp[i]))
+            cnt += 1
+            temp[i - 1] = str(1 - int(temp[i - 1]))
+            temp[i] = str(1 - int(temp[i]))
            
-           if i < len(temp) - 1:
-               temp[i + 1] = str(1 - int(temp[1]))
+            if i < len(temp) - 1:
+                temp[i + 1] = str(1 - int(temp[i + 1]))
     if temp == target:
         return cnt
     return 100001
