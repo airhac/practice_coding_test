@@ -1,0 +1,22 @@
+import sys
+input = sys.stdin.readline
+n, m = map(int, input().split())
+graph = [list(input().rstrip()) for _ in range(n)]
+answer = 0
+#가로확인
+for g in graph:
+    b = ''
+    for a in g:
+        if a == '-':
+            if a != b:
+                answer += 1
+        b = a
+         
+for g in zip(*graph):
+    b = ''
+    for a in g:
+        if a == '|':
+            if a != b:
+                answer += 1
+        b = a
+print(answer)     
